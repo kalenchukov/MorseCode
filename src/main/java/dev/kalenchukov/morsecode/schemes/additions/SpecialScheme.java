@@ -37,7 +37,7 @@ import java.util.Map;
  * Класс схемы сопоставления спецсимволов и сигналов.<br>
  * Схема соответствует рекомендации МСЭ-R M.1677-1.
  */
-public class GraphScheme implements Schematic
+public class SpecialScheme implements Schematic
 {
 	/**
 	 * Схема сопоставления символов с сигналами.
@@ -75,6 +75,6 @@ public class GraphScheme implements Schematic
 	@Override
 	public Map<@NotNull String, @NotNull List<@NotNull String>> getScheme()
 	{
-		return Collections.unmodifiableMap(GraphScheme.SCHEME);
+		return Collections.unmodifiableMap(SpecialScheme.SCHEME);
 	}
 }

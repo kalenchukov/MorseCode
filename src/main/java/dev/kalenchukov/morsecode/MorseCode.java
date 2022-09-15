@@ -25,7 +25,7 @@
 package dev.kalenchukov.morsecode;
 
 import dev.kalenchukov.morsecode.schemes.Schematic;
-import dev.kalenchukov.morsecode.schemes.additions.GraphScheme;
+import dev.kalenchukov.morsecode.schemes.additions.SpecialScheme;
 import dev.kalenchukov.morsecode.schemes.additions.NumberScheme;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -54,7 +54,7 @@ public class MorseCode implements Codable
 	public MorseCode(@NotNull final Schematic scheme)
 	{
 		this.addScheme(scheme);
-		this.addScheme(new GraphScheme());
+		this.addScheme(new SpecialScheme());
 		this.addScheme(new NumberScheme());
 	}
 
