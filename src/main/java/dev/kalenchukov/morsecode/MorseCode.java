@@ -44,7 +44,7 @@ public class MorseCode implements Codable
 	 * Схема сопоставления символов с сигналами.
 	 */
 	@NotNull
-	private final Map<@NotNull String, @NotNull List<@NotNull String>> scheme = new LinkedHashMap<>();
+	private final Map<@NotNull String, @NotNull List<@NotNull String>> scheme;
 
 	/**
 	 * Конструктор для {@code MorseCode}.
@@ -53,6 +53,8 @@ public class MorseCode implements Codable
 	 */
 	public MorseCode(@NotNull final Schematic scheme)
 	{
+		this.scheme = new LinkedHashMap<>();
+
 		this.addScheme(scheme);
 		this.addScheme(new SpecialScheme());
 		this.addScheme(new NumberScheme());
