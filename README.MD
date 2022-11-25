@@ -68,11 +68,3 @@ Codable morseCode = new MorseCode(new RussianScheme());
 morseCode.decode("..-.. .... --..--   ---. ..- ...- -..   -.- .- .--- ..-. --..--   ... .--. .-.. ..-- --.- -..-   --- -... .--.-. . --   .-- ---- .. --..--   --. .-. -.-- --.. .-.-   -.-. . -. - .-.-.-");
 // Результат выполнения: ЭХ, ЧУЖД КАЙФ, СПЛЮЩЬ ОБЪЕМ ВШИ, ГРЫЗЯ ЦЕНТ.
 ```
-
-## Версии
-
-Доступные [версии](https://github.com/kalenchukov/MorseCode/releases).
-
-## Лицензия
-
-[MIT](https://opensource.org/licenses/MIT)
