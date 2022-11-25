@@ -69,14 +69,6 @@ morseCode.decode("..-.. .... --..--   ---. ..- ...- -..   -.- .- .--- ..-. --..-
 // Результат выполнения: ЭХ, ЧУЖД КАЙФ, СПЛЮЩЬ ОБЪЕМ ВШИ, ГРЫЗЯ ЦЕНТ.
 ```
 
-## Установка
-
-Для установки этого проекта, введите в терминале:
-
-```bash
-git clone https://github.com/kalenchukov/MorseCode.git
-```
-
 ## Версии
 
 Доступные [версии](https://github.com/kalenchukov/MorseCode/releases).
