@@ -3,9 +3,12 @@
 ## vX.X.X - XX.XX.XXXX
 
 ### Добавлено
-*
+* Добавлен AUTHOR.MD.
+* Добавлен INSTALL.MD.
+* Добавлен CHANGELOG.MD.
 
 ### Изменено
+* Обновлён README.MD.
 * Изменён конструктор MorseCode.MorseCode(Schematic).
 
 ### Исправлено
@@ -21,5 +24,5 @@
 * Добавлен плагин maven-source в pom.xml.
 
 ### Изменено
-* Обновлён README.
+* Обновлён README.MD.
 * Переименован класс GraphScheme -> SpecialScheme.
