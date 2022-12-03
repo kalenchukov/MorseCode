@@ -49,7 +49,7 @@ public class MorseCode implements Codable
 	/**
 	 * Конструктор для {@code MorseCode}.
 	 *
-	 * @param scheme Схема сопоставления.
+	 * @param scheme схема сопоставления.
 	 */
 	public MorseCode(@NotNull final Schematic scheme)
 	{
@@ -121,8 +121,8 @@ public class MorseCode implements Codable
 	/**
 	 * Возвращает символ соответствующий сигналу в схеме сопоставления.
 	 *
-	 * @param signal Сигнал.
-	 * @return Символ или {@code null} если для данного сигнала нет символа в схеме сопоставления.
+	 * @param signal сигнал.
+	 * @return символ или {@code null} если для данного сигнала нет символа в схеме сопоставления.
 	 */
 	@Nullable
 	private String getSymbolBySignal(@NotNull final String signal)
@@ -142,8 +142,8 @@ public class MorseCode implements Codable
 	/**
 	 * Возвращает сигнал соответствующий символу в схеме сопоставления.
 	 *
-	 * @param symbol Символ.
-	 * @return Сигнал или {@code null} если для данного символа нет сигнала в схеме сопоставления.
+	 * @param symbol символ.
+	 * @return сигнал или {@code null} если для данного символа нет сигнала в схеме сопоставления.
 	 */
 	@Nullable
 	private String getSignalBySymbol(@NotNull final String symbol)
@@ -165,7 +165,7 @@ public class MorseCode implements Codable
 	/**
 	 * Добавляет схему сопоставления.
 	 *
-	 * @param scheme Схема сопоставления.
+	 * @param scheme схема сопоставления.
 	 */
 	private void addScheme(@NotNull final Schematic scheme)
 	{

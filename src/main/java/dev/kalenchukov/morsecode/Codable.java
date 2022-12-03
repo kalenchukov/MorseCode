@@ -34,8 +34,8 @@ public interface Codable
 	/**
 	 * Кодирует символы в сигналы.
 	 *
-	 * @param text Текст.
-	 * @return Закодированный текст.
+	 * @param text текст.
+	 * @return закодированный текст.
 	 */
 	@NotNull
 	String encode(@NotNull String text);
@@ -43,8 +43,8 @@ public interface Codable
 	/**
 	 * Декодирует сигналы в символы.
 	 *
-	 * @param code Код.
-	 * @return Декодированный текст.
+	 * @param code код.
+	 * @return декодированный текст.
 	 */
 	@NotNull
 	String decode(@NotNull String code);
