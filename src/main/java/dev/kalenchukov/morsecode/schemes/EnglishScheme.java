@@ -75,6 +75,11 @@ public class EnglishScheme implements Schematic
 	}
 
 	/**
+	 * Конструктор для {@code EnglishScheme}.
+	 */
+	public EnglishScheme() {}
+
+	/**
 	 * @see Schematic#getScheme()
 	 */
 	@Unmodifiable
