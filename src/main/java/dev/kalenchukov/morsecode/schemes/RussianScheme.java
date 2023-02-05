@@ -81,6 +81,11 @@ public class RussianScheme implements Schematic
 	}
 
 	/**
+	 * Конструктор для {@code RussianScheme}.
+	 */
+	public RussianScheme() {}
+
+	/**
 	 * @see Schematic#getScheme()
 	 */
 	@Unmodifiable
