@@ -30,13 +30,16 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link MorseCode}.
+ */
 public class MorseCodeTest
 {
 	/**
-	 * Проверяет кодирование русской схемы
+	 * Проверка метода {@link MorseCode#encode(String)} со схемой {@link RussianScheme}.
 	 */
 	@Test
-	public void encodeRussianScheme()
+	public void testEncodeRussianScheme()
 	{
 		Codable code = new MorseCode(new RussianScheme());
 		String result = code.encode("Эх, чужд кайф, сплющь объём вши, грызя цент.");
@@ -45,10 +48,10 @@ public class MorseCodeTest
 	}
 
 	/**
-	 * Проверяет декодирование русской схемы
+	 * Проверка метода {@link MorseCode#decode(String)} со схемой {@link RussianScheme}.
 	 */
 	@Test
-	public void decodeRussianScheme()
+	public void testDecodeRussianScheme()
 	{
 		Codable code = new MorseCode(new RussianScheme());
 		String result = code.decode("..-.. .... --..--   ---. ..- ...- -..   -.- .- .--- ..-. --..--   ... .--. .-.. ..-- --.- -..-   --- -... .--.-. . --   .-- ---- .. --..--   --. .-. -.-- --.. .-.-   -.-. . -. - .-.-.-");
@@ -57,10 +60,10 @@ public class MorseCodeTest
 	}
 
 	/**
-	 * Проверяет кодирование английской схемы
+	 * Проверка метода {@link MorseCode#encode(String)} со схемой {@link EnglishScheme}.
 	 */
 	@Test
-	public void encodeEnglishScheme()
+	public void testEncodeEnglishScheme()
 	{
 		Codable code = new MorseCode(new EnglishScheme());
 		String result = code.encode("The quick brown fox jumps over the lazy dog.");
@@ -69,10 +72,10 @@ public class MorseCodeTest
 	}
 
 	/**
-	 * Проверяет декодирование английской схемы
+	 * Проверка метода {@link MorseCode#decode(String)} со схемой {@link EnglishScheme}.
 	 */
 	@Test
-	public void decodeEnglishScheme()
+	public void testDecodeEnglishScheme()
 	{
 		Codable code = new MorseCode(new EnglishScheme());
 		String result = code.decode("- .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-");
