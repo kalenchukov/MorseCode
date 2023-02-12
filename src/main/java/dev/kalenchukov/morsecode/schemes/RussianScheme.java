@@ -25,12 +25,10 @@
 package dev.kalenchukov.morsecode.schemes;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Класс схемы сопоставления букв русского алфавита и сигналов.
@@ -94,5 +92,32 @@ public class RussianScheme implements Schematic
 	public Map<@NotNull String, @NotNull List<@NotNull String>> getScheme()
 	{
 		return Collections.unmodifiableMap(RussianScheme.SCHEME);
+	}
+
+	/**
+	 * @see Schematic#equals(Object)
+	 */
+	@Override
+	public boolean equals(@Nullable final Object obj)
+	{
+		if (obj == null) {
+			return false;
+		}
+
+		if (this == obj) {
+			return true;
+		}
+
+		if (!this.getClass().equals(obj.getClass())) {
+			return false;
+		}
+
+		final RussianScheme russianScheme = (RussianScheme) obj;
+
+		if (!Objects.equals(this.getScheme(), russianScheme.getScheme())) {
+			return false;
+		}
+
+		return true;
 	}
 }

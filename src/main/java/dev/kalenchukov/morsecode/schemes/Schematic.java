@@ -25,6 +25,7 @@
 package dev.kalenchukov.morsecode.schemes;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
@@ -43,4 +44,9 @@ public interface Schematic
 	@Unmodifiable
 	@NotNull
 	Map<@NotNull String, @NotNull List<@NotNull String>> getScheme();
+
+	/**
+	 * @see Object#equals(Object)
+	 */
+	boolean equals(@Nullable Object obj);
 }
