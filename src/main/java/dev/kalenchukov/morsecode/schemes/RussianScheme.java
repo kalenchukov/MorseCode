@@ -120,4 +120,13 @@ public class RussianScheme implements Schematic
 
 		return true;
 	}
+
+	/**
+	 * @see Schematic#hashCode()
+	 */
+	@Override
+	public int hashCode()
+	{
+		return this.getScheme().hashCode();
+	}
 }

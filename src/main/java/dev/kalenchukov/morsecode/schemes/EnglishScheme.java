@@ -114,4 +114,13 @@ public class EnglishScheme implements Schematic
 
 		return true;
 	}
+
+	/**
+	 * @see Schematic#hashCode()
+	 */
+	@Override
+	public int hashCode()
+	{
+		return this.getScheme().hashCode();
+	}
 }

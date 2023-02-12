@@ -3,6 +3,7 @@
 ### Добавлено
 * Добавлено перечисление схем сопоставления Schemes.
 * Добавлен метод Schematic.equals(Object).
+* Добавлен метод Schematic.hashCode().
 * Добавлен AUTHOR.MD.
 * Добавлен INSTALL.MD.
 * Добавлен CHANGELOG.MD.
