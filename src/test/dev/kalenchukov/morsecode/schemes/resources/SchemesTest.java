@@ -24,6 +24,7 @@
 
 package dev.kalenchukov.morsecode.schemes.resources;
 
+import dev.kalenchukov.morsecode.resources.Schemes;
 import dev.kalenchukov.morsecode.schemes.RussianScheme;
 import org.junit.jupiter.api.Test;
 

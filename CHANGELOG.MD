@@ -1,4 +1,8 @@
 # Журнал изменений
+## vX.X.X - XX.XX.XXXX
+### Изменено
+* Перемещён пакет *.morsecode.schemes.resources -> *.morsecode.resources.
+
 ## v1.2.0 - 12.02.2023
 ### Добавлено
 * Добавлено перечисление схем сопоставления Schemes.

@@ -22,7 +22,52 @@
  * SOFTWARE.
  */
 
+package dev.kalenchukov.morsecode.resources;
+
+import dev.kalenchukov.morsecode.schemes.EnglishScheme;
+import dev.kalenchukov.morsecode.schemes.RussianScheme;
+import dev.kalenchukov.morsecode.schemes.Schematic;
+import org.jetbrains.annotations.NotNull;
+
 /**
- * Предоставляет перечисления, необходимые для определения типов.
+ * Перечисление схем сопоставления букв.
  */
-package dev.kalenchukov.morsecode.schemes.resources;
+public enum Schemes
+{
+	/**
+	 * Буквы русского алфавита.
+	 */
+	RUSSIAN(new RussianScheme()),
+
+	/**
+	 * Буквы английского алфавита.
+	 */
+	ENGLISH(new EnglishScheme());
+
+	/**
+	 * Схема сопоставления.
+	 */
+	@NotNull
+	private final Schematic scheme;
+
+	/**
+	 * Конструктор для {@code Schemes}.
+	 *
+	 * @param scheme схема сопоставления.
+	 */
+	Schemes(@NotNull final Schematic scheme)
+	{
+		this.scheme = scheme;
+	}
+
+	/**
+	 * Возвращает схему сопоставления.
+	 *
+	 * @return схема сопоставления.
+	 */
+	@NotNull
+	public Schematic getScheme()
+	{
+		return this.scheme;
+	}
+}
