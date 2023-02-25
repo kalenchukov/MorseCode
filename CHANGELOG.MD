@@ -4,6 +4,7 @@
 * Перемещён пакет *.morsecode.schemes.resources -> *.morsecode.resources.
 * Добавлен метод NumberScheme.hashCode().
 * Добавлен метод SpecialScheme.hashCode().
+* Добавлен метод NumberScheme.equals(Object).
 
 ## v1.2.0 - 12.02.2023
 ### Добавлено
