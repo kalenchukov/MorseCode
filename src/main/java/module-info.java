@@ -7,4 +7,5 @@ module dev.kalenchukov.morsecode
 
 	exports dev.kalenchukov.morsecode;
 	exports dev.kalenchukov.morsecode.schemes;
+	exports dev.kalenchukov.morsecode.resources;
 }

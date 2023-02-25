@@ -6,6 +6,7 @@
 * Добавлен метод SpecialScheme.hashCode().
 * Добавлен метод NumberScheme.equals(Object).
 * Добавлен метод SpecialScheme.equals(Object).
+* В module-info.java добавлен пакет *.morsecode.resources.
 
 ## v1.2.0 - 12.02.2023
 ### Добавлено
