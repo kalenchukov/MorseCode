@@ -26,12 +26,10 @@ package dev.kalenchukov.morsecode.schemes.additions;
 
 import dev.kalenchukov.morsecode.schemes.Schematic;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Класс схемы сопоставления спецсимволов и сигналов.<br>
@@ -76,6 +74,33 @@ public class SpecialScheme implements Schematic
 	public Map<@NotNull String, @NotNull List<@NotNull String>> getScheme()
 	{
 		return Collections.unmodifiableMap(SpecialScheme.SCHEME);
+	}
+
+	/**
+	 * @see Schematic#equals(Object)
+	 */
+	@Override
+	public boolean equals(@Nullable final Object obj)
+	{
+		if (obj == null) {
+			return false;
+		}
+
+		if (this == obj) {
+			return true;
+		}
+
+		if (!this.getClass().equals(obj.getClass())) {
+			return false;
+		}
+
+		final SpecialScheme specialScheme = (SpecialScheme) obj;
+
+		if (!Objects.equals(this.getScheme(), specialScheme.getScheme())) {
+			return false;
+		}
+
+		return true;
 	}
 
 	/**

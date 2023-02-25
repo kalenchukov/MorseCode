@@ -5,6 +5,7 @@
 * Добавлен метод NumberScheme.hashCode().
 * Добавлен метод SpecialScheme.hashCode().
 * Добавлен метод NumberScheme.equals(Object).
+* Добавлен метод SpecialScheme.equals(Object).
 
 ## v1.2.0 - 12.02.2023
 ### Добавлено

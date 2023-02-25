@@ -24,7 +24,6 @@
 
 package dev.kalenchukov.morsecode.schemes.additions;
 
-import dev.kalenchukov.morsecode.schemes.EnglishScheme;
 import dev.kalenchukov.morsecode.schemes.Schematic;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
