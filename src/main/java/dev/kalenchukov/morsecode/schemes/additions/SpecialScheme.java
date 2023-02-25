@@ -77,4 +77,13 @@ public class SpecialScheme implements Schematic
 	{
 		return Collections.unmodifiableMap(SpecialScheme.SCHEME);
 	}
+
+	/**
+	 * @see Schematic#hashCode()
+	 */
+	@Override
+	public int hashCode()
+	{
+		return this.getScheme().hashCode();
+	}
 }
