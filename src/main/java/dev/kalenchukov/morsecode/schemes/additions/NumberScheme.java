@@ -69,4 +69,13 @@ public class NumberScheme implements Schematic
 	{
 		return Collections.unmodifiableMap(NumberScheme.SCHEME);
 	}
+
+	/**
+	 * @see Schematic#hashCode()
+	 */
+	@Override
+	public int hashCode()
+	{
+		return this.getScheme().hashCode();
+	}
 }

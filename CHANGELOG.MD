@@ -2,6 +2,7 @@
 ## vX.X.X - XX.XX.XXXX
 ### Изменено
 * Перемещён пакет *.morsecode.schemes.resources -> *.morsecode.resources.
+* Добавлен метод NumberScheme.hashCode().
 
 ## v1.2.0 - 12.02.2023
 ### Добавлено
