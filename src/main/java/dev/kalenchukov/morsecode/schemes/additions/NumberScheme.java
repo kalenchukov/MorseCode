@@ -58,7 +58,9 @@ public class NumberScheme implements Schematic
 	}
 
 	/**
-	 * @see Schematic#getScheme()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@Unmodifiable
 	@NotNull
@@ -69,7 +71,10 @@ public class NumberScheme implements Schematic
 	}
 
 	/**
-	 * @see Schematic#equals(Object)
+	 * {@inheritDoc}
+	 *
+	 * @param obj {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean equals(@Nullable final Object obj)
@@ -96,7 +101,9 @@ public class NumberScheme implements Schematic
 	}
 
 	/**
-	 * @see Schematic#hashCode()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public int hashCode()

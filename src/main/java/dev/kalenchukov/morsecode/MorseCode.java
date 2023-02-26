@@ -61,7 +61,10 @@ public class MorseCode implements Codable
 	}
 
 	/**
-	 * @see Codable#encode(String)
+	 * {@inheritDoc}
+	 *
+	 * @param text {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -94,7 +97,10 @@ public class MorseCode implements Codable
 	}
 
 	/**
-	 * @see Codable#decode(String)
+	 * {@inheritDoc}
+	 *
+	 * @param code {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override

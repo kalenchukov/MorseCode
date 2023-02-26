@@ -84,7 +84,9 @@ public class RussianScheme implements Schematic
 	public RussianScheme() {}
 
 	/**
-	 * @see Schematic#getScheme()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@Unmodifiable
 	@NotNull
@@ -95,7 +97,10 @@ public class RussianScheme implements Schematic
 	}
 
 	/**
-	 * @see Schematic#equals(Object)
+	 * {@inheritDoc}
+	 *
+	 * @param obj {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean equals(@Nullable final Object obj)
@@ -122,7 +127,9 @@ public class RussianScheme implements Schematic
 	}
 
 	/**
-	 * @see Schematic#hashCode()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public int hashCode()
