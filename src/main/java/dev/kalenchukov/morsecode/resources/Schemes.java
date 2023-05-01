@@ -31,6 +31,8 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * Перечисление схем сопоставления букв.
+ *
+ * @author Aleksey Kalenchukov
  */
 public enum Schemes
 {
