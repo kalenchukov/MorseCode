@@ -28,6 +28,8 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * Интерфейс для реализации класса кодировщика / декодировщика азбуки Морзе.
+ *
+ * @author Aleksey Kalenchukov
  */
 public interface Codable
 {
