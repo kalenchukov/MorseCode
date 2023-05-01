@@ -34,6 +34,8 @@ import java.util.*;
 /**
  * Класс схемы сопоставления цифр и сигналов.<br>
  * Схема соответствует рекомендации МСЭ-R M.1677-1.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class NumberScheme implements Schematic
 {

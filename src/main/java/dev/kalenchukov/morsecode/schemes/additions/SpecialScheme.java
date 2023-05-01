@@ -34,6 +34,8 @@ import java.util.*;
 /**
  * Класс схемы сопоставления спецсимволов и сигналов.<br>
  * Схема соответствует рекомендации МСЭ-R M.1677-1.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class SpecialScheme implements Schematic
 {

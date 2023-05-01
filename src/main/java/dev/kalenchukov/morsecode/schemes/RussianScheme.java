@@ -32,6 +32,8 @@ import java.util.*;
 
 /**
  * Класс схемы сопоставления букв русского алфавита и сигналов.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class RussianScheme implements Schematic
 {

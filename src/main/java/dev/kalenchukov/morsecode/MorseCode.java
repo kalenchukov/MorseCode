@@ -37,6 +37,8 @@ import java.util.Objects;
 
 /**
  * Класс кодирования / декодирования азбуки Морзе.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class MorseCode implements Codable
 {
