@@ -41,7 +41,7 @@ import java.util.Objects;
  *
  * @author Aleksey Kalenchukov
  */
-public class MorseCode implements Codable
+public class MorseCode implements MorseCodable
 {
 	/**
 	 * Схема сопоставления символов с сигналами.

@@ -58,7 +58,7 @@ Schemes.RUSSIAN.getScheme();
 ### Кодирование и декодирование
 #### Кодирование
 ```java
-Codable morseCode = new MorseCode(new RussianScheme());
+MorseCodable morseCode = new MorseCode(Schemes.RUSSIAN);
 morseCode.encode("Эх, чужд кайф, сплющь объём вши, грызя цент.");
 ```
 
@@ -69,7 +69,7 @@ morseCode.encode("Эх, чужд кайф, сплющь объём вши, гр�
 
 #### Декодирование
 ```java
-Codable morseCode = new MorseCode(new RussianScheme());
+MorseCodable morseCode = new MorseCode(Schemes.RUSSIAN);
 morseCode.decode("..-.. .... --..--   ---. ..- ...- -..   -.- .- .--- ..-. --..--   ... .--. .-.. ..-- --.- -..-   --- -... .--.-. . --   .-- ---- .. --..--   --. .-. -.-- --.. .-.-   -.-. . -. - .-.-.-");
 ```
 

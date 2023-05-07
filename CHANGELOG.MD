@@ -9,6 +9,7 @@
 * В module-info.java добавлен пакет *.morsecode.resources.
 * Добавлен класс AbstractScheme.
 * Добавлен конструктор MorseCode.MorseCode(Schemes).
+* Переименован интерфейс Codable -> MorseCodable.
 
 ## v1.2.0 - 12.02.2023
 ### Добавлено

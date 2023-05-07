@@ -44,8 +44,8 @@ public class MorseCodeTest
 	@Test
 	public void testEncodeRussianScheme()
 	{
-		Codable code = new MorseCode(new RussianScheme());
-		String result = code.encode("Эх, чужд кайф, сплющь объём вши, грызя цент.");
+		MorseCodable morseCode = new MorseCode(new RussianScheme());
+		String result = morseCode.encode("Эх, чужд кайф, сплющь объём вши, грызя цент.");
 
 		assertEquals("..-.. .... --..--   ---. ..- ...- -..   -.- .- .--- ..-. --..--   ... .--. .-.. ..-- --.- -..-   --- -... .--.-. . --   .-- ---- .. --..--   --. .-. -.-- --.. .-.-   -.-. . -. - .-.-.-", result);
 	}
@@ -56,8 +56,10 @@ public class MorseCodeTest
 	@Test
 	public void testDecodeRussianScheme()
 	{
-		Codable code = new MorseCode(Schemes.RUSSIAN);
-		String result = code.decode("..-.. .... --..--   ---. ..- ...- -..   -.- .- .--- ..-. --..--   ... .--. .-.. ..-- --.- -..-   --- -... .--.-. . --   .-- ---- .. --..--   --. .-. -.-- --.. .-.-   -.-. . -. - .-.-.-");
+		MorseCodable morseCode = new MorseCode(Schemes.RUSSIAN);
+		String result = morseCode.decode(
+			"..-.. .... --..--   ---. ..- ...- -..   -.- .- .--- ..-. --..--   ... .--. .-.. ..-- --.- -..-   --- -... .--.-. . --   .-- ---- .. --..--   --. .-. -.-- --.. .-.-   -.-. . -. - .-.-.-"
+		);
 
 		assertEquals("ЭХ, ЧУЖД КАЙФ, СПЛЮЩЬ ОБЪЕМ ВШИ, ГРЫЗЯ ЦЕНТ.", result);
 	}
@@ -68,8 +70,8 @@ public class MorseCodeTest
 	@Test
 	public void testEncodeEnglishScheme()
 	{
-		Codable code = new MorseCode(new EnglishScheme());
-		String result = code.encode("The quick brown fox jumps over the lazy dog.");
+		MorseCodable morseCode = new MorseCode(new EnglishScheme());
+		String result = morseCode.encode("The quick brown fox jumps over the lazy dog.");
 
 		assertEquals("- .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-", result);
 	}
@@ -80,8 +82,10 @@ public class MorseCodeTest
 	@Test
 	public void testDecodeEnglishScheme()
 	{
-		Codable code = new MorseCode(Schemes.ENGLISH);
-		String result = code.decode("- .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-");
+		MorseCodable morseCode = new MorseCode(Schemes.ENGLISH);
+		String result = morseCode.decode(
+			"- .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-"
+		);
 
 		assertEquals("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.", result);
 	}

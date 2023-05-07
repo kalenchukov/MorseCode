@@ -31,7 +31,7 @@ import org.jetbrains.annotations.NotNull;
  *
  * @author Aleksey Kalenchukov
  */
-public interface Codable
+public interface MorseCodable
 {
 	/**
 	 * Кодирует символы в сигналы.
