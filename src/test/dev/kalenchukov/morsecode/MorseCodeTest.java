@@ -24,6 +24,7 @@
 
 package dev.kalenchukov.morsecode;
 
+import dev.kalenchukov.morsecode.resources.Schemes;
 import dev.kalenchukov.morsecode.schemes.EnglishScheme;
 import dev.kalenchukov.morsecode.schemes.RussianScheme;
 import org.junit.jupiter.api.Test;
@@ -55,7 +56,7 @@ public class MorseCodeTest
 	@Test
 	public void testDecodeRussianScheme()
 	{
-		Codable code = new MorseCode(new RussianScheme());
+		Codable code = new MorseCode(Schemes.RUSSIAN);
 		String result = code.decode("..-.. .... --..--   ---. ..- ...- -..   -.- .- .--- ..-. --..--   ... .--. .-.. ..-- --.- -..-   --- -... .--.-. . --   .-- ---- .. --..--   --. .-. -.-- --.. .-.-   -.-. . -. - .-.-.-");
 
 		assertEquals("ЭХ, ЧУЖД КАЙФ, СПЛЮЩЬ ОБЪЕМ ВШИ, ГРЫЗЯ ЦЕНТ.", result);
@@ -79,7 +80,7 @@ public class MorseCodeTest
 	@Test
 	public void testDecodeEnglishScheme()
 	{
-		Codable code = new MorseCode(new EnglishScheme());
+		Codable code = new MorseCode(Schemes.ENGLISH);
 		String result = code.decode("- .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-");
 
 		assertEquals("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.", result);

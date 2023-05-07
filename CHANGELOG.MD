@@ -7,6 +7,8 @@
 * Добавлен метод NumberScheme.equals(Object).
 * Добавлен метод SpecialScheme.equals(Object).
 * В module-info.java добавлен пакет *.morsecode.resources.
+* Добавлен класс AbstractScheme.
+* Добавлен конструктор MorseCode.MorseCode(Schemes).
 
 ## v1.2.0 - 12.02.2023
 ### Добавлено

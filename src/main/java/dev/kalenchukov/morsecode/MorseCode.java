@@ -24,6 +24,7 @@
 
 package dev.kalenchukov.morsecode;
 
+import dev.kalenchukov.morsecode.resources.Schemes;
 import dev.kalenchukov.morsecode.schemes.Schematic;
 import dev.kalenchukov.morsecode.schemes.additions.SpecialScheme;
 import dev.kalenchukov.morsecode.schemes.additions.NumberScheme;
@@ -47,6 +48,16 @@ public class MorseCode implements Codable
 	 */
 	@NotNull
 	private final Map<@NotNull String, @NotNull List<@NotNull String>> scheme;
+
+	/**
+	 * Конструктор для {@code MorseCode}.
+	 *
+	 * @param scheme схема сопоставления.
+	 */
+	public MorseCode(@NotNull final Schemes scheme)
+	{
+		this(scheme.getScheme());
+	}
 
 	/**
 	 * Конструктор для {@code MorseCode}.
