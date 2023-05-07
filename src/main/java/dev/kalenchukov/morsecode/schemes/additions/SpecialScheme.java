@@ -24,10 +24,9 @@
 
 package dev.kalenchukov.morsecode.schemes.additions;
 
-import dev.kalenchukov.morsecode.schemes.Schematic;
+import dev.kalenchukov.morsecode.schemes.AbstractScheme;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.*;
 
@@ -37,7 +36,7 @@ import java.util.*;
  *
  * @author Aleksey Kalenchukov
  */
-public class SpecialScheme implements Schematic
+public class SpecialScheme extends AbstractScheme
 {
 	/**
 	 * Схема сопоставления символов с сигналами.
@@ -68,16 +67,11 @@ public class SpecialScheme implements Schematic
 	}
 
 	/**
-	 * {@inheritDoc}
-	 *
-	 * @return {@inheritDoc}
+	 * Конструктор для {@code SpecialScheme}.
 	 */
-	@Unmodifiable
-	@NotNull
-	@Override
-	public Map<@NotNull String, @NotNull List<@NotNull String>> getScheme()
+	public SpecialScheme()
 	{
-		return Collections.unmodifiableMap(SpecialScheme.SCHEME);
+		super(SpecialScheme.SCHEME);
 	}
 
 	/**
