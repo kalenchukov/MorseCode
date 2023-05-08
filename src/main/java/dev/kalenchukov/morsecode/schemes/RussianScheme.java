@@ -108,9 +108,9 @@ public class RussianScheme extends AbstractScheme
 			return false;
 		}
 
-		final RussianScheme russianScheme = (RussianScheme) obj;
+		final RussianScheme scheme = (RussianScheme) obj;
 
-		if (!Objects.equals(this.getScheme(), russianScheme.getScheme())) {
+		if (!Objects.equals(this.getScheme(), scheme.getScheme())) {
 			return false;
 		}
 

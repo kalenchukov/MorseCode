@@ -95,9 +95,9 @@ public class SpecialScheme extends AbstractScheme
 			return false;
 		}
 
-		final SpecialScheme specialScheme = (SpecialScheme) obj;
+		final SpecialScheme scheme = (SpecialScheme) obj;
 
-		if (!Objects.equals(this.getScheme(), specialScheme.getScheme())) {
+		if (!Objects.equals(this.getScheme(), scheme.getScheme())) {
 			return false;
 		}
 

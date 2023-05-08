@@ -102,9 +102,9 @@ public class EnglishScheme extends AbstractScheme
 			return false;
 		}
 
-		final EnglishScheme englishScheme = (EnglishScheme) obj;
+		final EnglishScheme scheme = (EnglishScheme) obj;
 
-		if (!Objects.equals(this.getScheme(), englishScheme.getScheme())) {
+		if (!Objects.equals(this.getScheme(), scheme.getScheme())) {
 			return false;
 		}
 

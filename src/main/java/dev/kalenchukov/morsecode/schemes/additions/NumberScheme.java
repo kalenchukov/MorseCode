@@ -87,9 +87,9 @@ public class NumberScheme extends AbstractScheme
 			return false;
 		}
 
-		final NumberScheme numberScheme = (NumberScheme) obj;
+		final NumberScheme scheme = (NumberScheme) obj;
 
-		if (!Objects.equals(this.getScheme(), numberScheme.getScheme())) {
+		if (!Objects.equals(this.getScheme(), scheme.getScheme())) {
 			return false;
 		}
 
