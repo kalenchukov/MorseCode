@@ -52,12 +52,18 @@
 ### Перечисления
 #### Получение схемы сопоставления
 ```java
+import dev.kalenchukov.morsecode.resources.Language;
+
 Language.RUSSIAN.getScheme();
 ```
 
 ### Кодирование и декодирование
 #### Кодирование
 ```java
+import dev.kalenchukov.morsecode.resources.Language;
+import dev.kalenchukov.morsecode.MorseCodable;
+import dev.kalenchukov.morsecode.MorseCode;
+
 MorseCodable morseCode = new MorseCode(Language.RUSSIAN);
 morseCode.encode("Эх, чужд кайф, сплющь объём вши, грызя цент.");
 ```
@@ -69,6 +75,10 @@ morseCode.encode("Эх, чужд кайф, сплющь объём вши, гр�
 
 #### Декодирование
 ```java
+import dev.kalenchukov.morsecode.resources.Language;
+import dev.kalenchukov.morsecode.MorseCodable;
+import dev.kalenchukov.morsecode.MorseCode;
+
 MorseCodable morseCode = new MorseCode(Language.RUSSIAN);
 morseCode.decode("..-.. .... --..--   ---. ..- ...- -..   -.- .- .--- ..-. --..--   ... .--. .-.. ..-- --.- -..-   --- -... .--.-. . --   .-- ---- .. --..--   --. .-. -.-- --.. .-.-   -.-. . -. - .-.-.-");
 ```
