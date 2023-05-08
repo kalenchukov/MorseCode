@@ -56,19 +56,9 @@ public class MorseCode implements MorseCodable
 	 */
 	public MorseCode(@NotNull final Language scheme)
 	{
-		this(scheme.getScheme());
-	}
-
-	/**
-	 * Конструктор для {@code MorseCode}.
-	 *
-	 * @param scheme схема сопоставления.
-	 */
-	public MorseCode(@NotNull final Schematic scheme)
-	{
 		this.scheme = new LinkedHashMap<>();
 
-		this.addScheme(scheme);
+		this.addScheme(scheme.getScheme());
 		this.addScheme(new SpecialScheme());
 		this.addScheme(new NumberScheme());
 	}

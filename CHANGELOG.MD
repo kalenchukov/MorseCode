@@ -1,7 +1,6 @@
 # Журнал изменений
 ## vX.X.X - XX.XX.XXXX
-### Изменено
-* Перемещён пакет *.morsecode.schemes.resources -> *.morsecode.resources.
+### Добавлено
 * Добавлен метод NumberScheme.hashCode().
 * Добавлен метод SpecialScheme.hashCode().
 * Добавлен метод NumberScheme.equals(Object).
@@ -9,8 +8,14 @@
 * В module-info.java добавлен пакет *.morsecode.resources.
 * Добавлен класс AbstractScheme.
 * Добавлен конструктор MorseCode.MorseCode(Schemes).
+
+### Изменено
+* Перемещён пакет *.morsecode.schemes.resources -> *.morsecode.resources.
 * Переименован интерфейс Codable -> MorseCodable.
 * Переименовано перечисление Schemes -> Language.
+
+### Удалено
+* Удалён конструктор MorseCode.MorseCode(Schematic).
 
 ## v1.2.0 - 12.02.2023
 ### Добавлено

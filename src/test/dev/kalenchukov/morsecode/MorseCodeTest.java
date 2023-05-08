@@ -44,7 +44,7 @@ public class MorseCodeTest
 	@Test
 	public void testEncodeRussianScheme()
 	{
-		MorseCodable morseCode = new MorseCode(new RussianScheme());
+		MorseCodable morseCode = new MorseCode(Language.RUSSIAN);
 		String result = morseCode.encode("Эх, чужд кайф, сплющь объём вши, грызя цент.");
 
 		assertEquals("..-.. .... --..--   ---. ..- ...- -..   -.- .- .--- ..-. --..--   ... .--. .-.. ..-- --.- -..-   --- -... .--.-. . --   .-- ---- .. --..--   --. .-. -.-- --.. .-.-   -.-. . -. - .-.-.-", result);
@@ -70,7 +70,7 @@ public class MorseCodeTest
 	@Test
 	public void testEncodeEnglishScheme()
 	{
-		MorseCodable morseCode = new MorseCode(new EnglishScheme());
+		MorseCodable morseCode = new MorseCode(Language.ENGLISH);
 		String result = morseCode.encode("The quick brown fox jumps over the lazy dog.");
 
 		assertEquals("- .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-", result);
