@@ -30,18 +30,18 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Класс проверки констант и методов перечисления {@link Schemes}.
+ * Класс проверки констант и методов перечисления {@link Language}.
  *
  * @author Aleksey Kalenchukov
  */
-public class SchemesTest
+public class LanguageTest
 {
 	/**
-	 * Проверка метода {@link Schemes#getScheme()}.
+	 * Проверка метода {@link Language#getScheme()}.
 	 */
 	@Test
 	public void getScheme()
 	{
-		assertEquals(new RussianScheme(), Schemes.RUSSIAN.getScheme());
+		assertEquals(new RussianScheme(), Language.RUSSIAN.getScheme());
 	}
 }

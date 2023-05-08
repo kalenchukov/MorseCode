@@ -10,6 +10,7 @@
 * Добавлен класс AbstractScheme.
 * Добавлен конструктор MorseCode.MorseCode(Schemes).
 * Переименован интерфейс Codable -> MorseCodable.
+* Переименовано перечисление Schemes -> Language.
 
 ## v1.2.0 - 12.02.2023
 ### Добавлено

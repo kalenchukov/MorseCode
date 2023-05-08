@@ -24,7 +24,7 @@
 
 package dev.kalenchukov.morsecode;
 
-import dev.kalenchukov.morsecode.resources.Schemes;
+import dev.kalenchukov.morsecode.resources.Language;
 import dev.kalenchukov.morsecode.schemes.EnglishScheme;
 import dev.kalenchukov.morsecode.schemes.RussianScheme;
 import org.junit.jupiter.api.Test;
@@ -56,7 +56,7 @@ public class MorseCodeTest
 	@Test
 	public void testDecodeRussianScheme()
 	{
-		MorseCodable morseCode = new MorseCode(Schemes.RUSSIAN);
+		MorseCodable morseCode = new MorseCode(Language.RUSSIAN);
 		String result = morseCode.decode(
 			"..-.. .... --..--   ---. ..- ...- -..   -.- .- .--- ..-. --..--   ... .--. .-.. ..-- --.- -..-   --- -... .--.-. . --   .-- ---- .. --..--   --. .-. -.-- --.. .-.-   -.-. . -. - .-.-.-"
 		);
@@ -82,7 +82,7 @@ public class MorseCodeTest
 	@Test
 	public void testDecodeEnglishScheme()
 	{
-		MorseCodable morseCode = new MorseCode(Schemes.ENGLISH);
+		MorseCodable morseCode = new MorseCode(Language.ENGLISH);
 		String result = morseCode.decode(
 			"- .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-"
 		);

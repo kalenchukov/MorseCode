@@ -30,19 +30,19 @@ import dev.kalenchukov.morsecode.schemes.Schematic;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Перечисление схем сопоставления букв.
+ * Перечисление языков транслитерации.
  *
  * @author Aleksey Kalenchukov
  */
-public enum Schemes
+public enum Language
 {
 	/**
-	 * Буквы русского алфавита.
+	 * Русский язык.
 	 */
 	RUSSIAN(new RussianScheme()),
 
 	/**
-	 * Буквы английского алфавита.
+	 * Английский язык.
 	 */
 	ENGLISH(new EnglishScheme());
 
@@ -53,11 +53,11 @@ public enum Schemes
 	private final Schematic scheme;
 
 	/**
-	 * Конструктор для {@code Schemes}.
+	 * Конструктор для {@code Language}.
 	 *
 	 * @param scheme схема сопоставления.
 	 */
-	Schemes(@NotNull final Schematic scheme)
+	Language(@NotNull final Schematic scheme)
 	{
 		this.scheme = scheme;
 	}
