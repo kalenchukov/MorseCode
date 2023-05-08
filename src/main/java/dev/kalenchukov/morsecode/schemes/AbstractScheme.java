@@ -36,7 +36,7 @@ import java.util.Map;
  *
  * @author Aleksey Kalenchukov
  */
-public class AbstractScheme implements Schematic
+public abstract class AbstractScheme implements Schematic
 {
 	/**
 	 * Схема сопоставления символов с сигналами.
