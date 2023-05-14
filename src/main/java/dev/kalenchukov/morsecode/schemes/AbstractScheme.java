@@ -46,6 +46,8 @@ public abstract class AbstractScheme implements Schematic
 
 	/**
 	 * Конструктор для {@code AbstractScheme}.
+	 *
+	 * @param scheme схема сопоставления символов с сигналами.
 	 */
 	protected AbstractScheme(@NotNull final Map<@NotNull String, @NotNull List<@NotNull String>> scheme)
 	{
