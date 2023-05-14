@@ -1,5 +1,5 @@
 # Журнал изменений
-## vX.X.X - XX.XX.XXXX
+## v1.3.0 - 14.05.2023
 ### Добавлено
 * Добавлен метод NumberScheme.hashCode().
 * Добавлен метод SpecialScheme.hashCode().
