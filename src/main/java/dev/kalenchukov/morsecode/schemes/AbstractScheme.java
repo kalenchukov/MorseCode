@@ -34,7 +34,7 @@ import java.util.Map;
 /**
  * Класс схемы сопоставления букв абстрактного алфавита и сигналов.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public abstract class AbstractScheme implements Schematic
 {

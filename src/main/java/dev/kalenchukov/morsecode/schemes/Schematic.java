@@ -34,7 +34,7 @@ import java.util.Map;
 /**
  * Интерфейс для реализации схемы сопоставления символов с сигналами.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public interface Schematic
 {

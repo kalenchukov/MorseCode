@@ -32,7 +32,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Перечисление языков транслитерации.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public enum Language
 {

@@ -29,7 +29,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Интерфейс для реализации класса кодировщика / декодировщика азбуки Морзе.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public interface MorseCodable
 {

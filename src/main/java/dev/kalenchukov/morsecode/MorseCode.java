@@ -39,7 +39,7 @@ import java.util.Objects;
 /**
  * Класс кодирования / декодирования азбуки Морзе.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class MorseCode implements MorseCodable
 {

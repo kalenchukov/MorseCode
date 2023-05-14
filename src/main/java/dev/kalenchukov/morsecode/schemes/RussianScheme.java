@@ -32,7 +32,7 @@ import java.util.*;
 /**
  * Класс схемы сопоставления букв русского алфавита и сигналов.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class RussianScheme extends AbstractScheme
 {

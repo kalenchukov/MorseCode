@@ -34,7 +34,7 @@ import java.util.*;
  * Класс схемы сопоставления цифр и сигналов.<br>
  * Схема соответствует рекомендации МСЭ-R M.1677-1.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class NumberScheme extends AbstractScheme
 {
