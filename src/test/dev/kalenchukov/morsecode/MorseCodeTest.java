@@ -42,7 +42,7 @@ public class MorseCodeTest
 	 * Проверка метода {@link MorseCode#encode(String)} со схемой {@link RussianScheme}.
 	 */
 	@Test
-	public void testEncodeRussianScheme()
+	public void encodeRussianScheme()
 	{
 		MorseCodable morseCode = new MorseCode(Language.RUSSIAN);
 		String result = morseCode.encode("Эх, чужд кайф, сплющь объём вши, грызя цент.");
@@ -54,7 +54,7 @@ public class MorseCodeTest
 	 * Проверка метода {@link MorseCode#decode(String)} со схемой {@link RussianScheme}.
 	 */
 	@Test
-	public void testDecodeRussianScheme()
+	public void decodeRussianScheme()
 	{
 		MorseCodable morseCode = new MorseCode(Language.RUSSIAN);
 		String result = morseCode.decode(
@@ -68,7 +68,7 @@ public class MorseCodeTest
 	 * Проверка метода {@link MorseCode#encode(String)} со схемой {@link EnglishScheme}.
 	 */
 	@Test
-	public void testEncodeEnglishScheme()
+	public void encodeEnglishScheme()
 	{
 		MorseCodable morseCode = new MorseCode(Language.ENGLISH);
 		String result = morseCode.encode("The quick brown fox jumps over the lazy dog.");
@@ -80,7 +80,7 @@ public class MorseCodeTest
 	 * Проверка метода {@link MorseCode#decode(String)} со схемой {@link EnglishScheme}.
 	 */
 	@Test
-	public void testDecodeEnglishScheme()
+	public void decodeEnglishScheme()
 	{
 		MorseCodable morseCode = new MorseCode(Language.ENGLISH);
 		String result = morseCode.decode(
