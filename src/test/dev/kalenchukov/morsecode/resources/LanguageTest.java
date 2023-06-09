@@ -25,6 +25,7 @@
 package dev.kalenchukov.morsecode.resources;
 
 import dev.kalenchukov.morsecode.schemes.RussianScheme;
+import dev.kalenchukov.morsecode.schemes.Schematic;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -42,6 +43,10 @@ public class LanguageTest
 	@Test
 	public void getScheme()
 	{
-		assertEquals(new RussianScheme(), Language.RUSSIAN.getScheme());
+		Schematic expected = new RussianScheme();
+
+		Schematic actual = Language.RUSSIAN.getScheme();
+
+		assertEquals(expected, actual);
 	}
 }

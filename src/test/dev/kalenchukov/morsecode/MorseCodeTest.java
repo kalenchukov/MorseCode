@@ -44,10 +44,15 @@ public class MorseCodeTest
 	@Test
 	public void encodeRussianScheme()
 	{
-		MorseCodable morseCode = new MorseCode(Language.RUSSIAN);
-		String result = morseCode.encode("Эх, чужд кайф, сплющь объём вши, грызя цент.");
+		String value = "Эх, чужд кайф, сплющь объём вши, грызя цент.";
+		String expected = "..-.. .... --..--   ---. ..- ...- -..   -.- .- .---" +
+				" ..-. --..--   ... .--. .-.. ..-- --.- -..-   --- -... .--.-." +
+				" . --   .-- ---- .. --..--   --. .-. -.-- --.. .-.-   -.-. . -. - .-.-.-";
 
-		assertEquals("..-.. .... --..--   ---. ..- ...- -..   -.- .- .--- ..-. --..--   ... .--. .-.. ..-- --.- -..-   --- -... .--.-. . --   .-- ---- .. --..--   --. .-. -.-- --.. .-.-   -.-. . -. - .-.-.-", result);
+		MorseCodable morseCode = new MorseCode(Language.RUSSIAN);
+		String actual = morseCode.encode(value);
+
+		assertEquals(expected, actual);
 	}
 
 	/**
@@ -56,12 +61,16 @@ public class MorseCodeTest
 	@Test
 	public void decodeRussianScheme()
 	{
-		MorseCodable morseCode = new MorseCode(Language.RUSSIAN);
-		String result = morseCode.decode(
-			"..-.. .... --..--   ---. ..- ...- -..   -.- .- .--- ..-. --..--   ... .--. .-.. ..-- --.- -..-   --- -... .--.-. . --   .-- ---- .. --..--   --. .-. -.-- --.. .-.-   -.-. . -. - .-.-.-"
-		);
+		String value = "..-.. .... --..--   ---. ..- ...- -..   -.- .- .---" +
+				" ..-. --..--   ... .--. .-.. ..-- --.- -..-" +
+				"   --- -... .--.-. . --   .-- ---- .. --..--" +
+				"   --. .-. -.-- --.. .-.-   -.-. . -. - .-.-.-";
+		String expected = "ЭХ, ЧУЖД КАЙФ, СПЛЮЩЬ ОБЪЕМ ВШИ, ГРЫЗЯ ЦЕНТ.";
 
-		assertEquals("ЭХ, ЧУЖД КАЙФ, СПЛЮЩЬ ОБЪЕМ ВШИ, ГРЫЗЯ ЦЕНТ.", result);
+		MorseCodable morseCode = new MorseCode(Language.RUSSIAN);
+		String actual = morseCode.decode(value);
+
+		assertEquals(expected, actual);
 	}
 
 	/**
@@ -70,10 +79,15 @@ public class MorseCodeTest
 	@Test
 	public void encodeEnglishScheme()
 	{
-		MorseCodable morseCode = new MorseCode(Language.ENGLISH);
-		String result = morseCode.encode("The quick brown fox jumps over the lazy dog.");
+		String value = "The quick brown fox jumps over the lazy dog.";
+		String expected = "- .... .   --.- ..- .. -.-. -.-   -... .-. ---" +
+				" .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...-" +
+				" . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-";
 
-		assertEquals("- .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-", result);
+		MorseCodable morseCode = new MorseCode(Language.ENGLISH);
+		String actual = morseCode.encode(value);
+
+		assertEquals(expected, actual);
 	}
 
 	/**
@@ -82,11 +96,14 @@ public class MorseCodeTest
 	@Test
 	public void decodeEnglishScheme()
 	{
-		MorseCodable morseCode = new MorseCode(Language.ENGLISH);
-		String result = morseCode.decode(
-			"- .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-"
-		);
+		String value = "- .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -." +
+				"   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-." +
+				"   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-";
+		String expected = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.";
 
-		assertEquals("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.", result);
+		MorseCodable morseCode = new MorseCode(Language.ENGLISH);
+		String actual = morseCode.decode(value);
+
+		assertEquals(expected, actual);
 	}
 }
