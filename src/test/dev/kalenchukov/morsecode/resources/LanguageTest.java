@@ -28,7 +28,7 @@ import dev.kalenchukov.morsecode.schemes.RussianScheme;
 import dev.kalenchukov.morsecode.schemes.Schematic;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки констант и методов перечисления {@link Language}.
@@ -48,6 +48,6 @@ public class LanguageTest
 
 		Schematic actualScheme = language.getScheme();
 
-		assertEquals(expectedScheme, actualScheme);
+		assertThat(actualScheme).isEqualTo(expectedScheme);
 	}
 }

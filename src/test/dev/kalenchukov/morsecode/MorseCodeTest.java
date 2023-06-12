@@ -29,7 +29,7 @@ import dev.kalenchukov.morsecode.schemes.EnglishScheme;
 import dev.kalenchukov.morsecode.schemes.RussianScheme;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link MorseCode}.
@@ -52,7 +52,7 @@ public class MorseCodeTest
 		MorseCodable morseCode = new MorseCode(Language.RUSSIAN);
 		String actualString = morseCode.encode(value);
 
-		assertEquals(expectedString, actualString);
+		assertThat(actualString).isEqualTo(expectedString);
 	}
 
 	/**
@@ -70,7 +70,7 @@ public class MorseCodeTest
 		MorseCodable morseCode = new MorseCode(Language.RUSSIAN);
 		String actualString = morseCode.decode(value);
 
-		assertEquals(expectedString, actualString);
+		assertThat(actualString).isEqualTo(expectedString);
 	}
 
 	/**
@@ -87,7 +87,7 @@ public class MorseCodeTest
 		MorseCodable morseCode = new MorseCode(Language.ENGLISH);
 		String actualString = morseCode.encode(value);
 
-		assertEquals(expectedString, actualString);
+		assertThat(actualString).isEqualTo(expectedString);
 	}
 
 	/**
@@ -104,6 +104,6 @@ public class MorseCodeTest
 		MorseCodable morseCode = new MorseCode(Language.ENGLISH);
 		String actualString = morseCode.decode(value);
 
-		assertEquals(expectedString, actualString);
+		assertThat(actualString).isEqualTo(expectedString);
 	}
 }
