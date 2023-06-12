@@ -45,14 +45,14 @@ public class MorseCodeTest
 	public void encodeRussianScheme()
 	{
 		String value = "Эх, чужд кайф, сплющь объём вши, грызя цент.";
-		String expected = "..-.. .... --..--   ---. ..- ...- -..   -.- .- .---" +
+		String expectedString = "..-.. .... --..--   ---. ..- ...- -..   -.- .- .---" +
 				" ..-. --..--   ... .--. .-.. ..-- --.- -..-   --- -... .--.-." +
 				" . --   .-- ---- .. --..--   --. .-. -.-- --.. .-.-   -.-. . -. - .-.-.-";
 
 		MorseCodable morseCode = new MorseCode(Language.RUSSIAN);
-		String actual = morseCode.encode(value);
+		String actualString = morseCode.encode(value);
 
-		assertEquals(expected, actual);
+		assertEquals(expectedString, actualString);
 	}
 
 	/**
@@ -65,12 +65,12 @@ public class MorseCodeTest
 				" ..-. --..--   ... .--. .-.. ..-- --.- -..-" +
 				"   --- -... .--.-. . --   .-- ---- .. --..--" +
 				"   --. .-. -.-- --.. .-.-   -.-. . -. - .-.-.-";
-		String expected = "ЭХ, ЧУЖД КАЙФ, СПЛЮЩЬ ОБЪЕМ ВШИ, ГРЫЗЯ ЦЕНТ.";
+		String expectedString = "ЭХ, ЧУЖД КАЙФ, СПЛЮЩЬ ОБЪЕМ ВШИ, ГРЫЗЯ ЦЕНТ.";
 
 		MorseCodable morseCode = new MorseCode(Language.RUSSIAN);
-		String actual = morseCode.decode(value);
+		String actualString = morseCode.decode(value);
 
-		assertEquals(expected, actual);
+		assertEquals(expectedString, actualString);
 	}
 
 	/**
@@ -80,14 +80,14 @@ public class MorseCodeTest
 	public void encodeEnglishScheme()
 	{
 		String value = "The quick brown fox jumps over the lazy dog.";
-		String expected = "- .... .   --.- ..- .. -.-. -.-   -... .-. ---" +
+		String expectedString = "- .... .   --.- ..- .. -.-. -.-   -... .-. ---" +
 				" .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...-" +
 				" . .-.   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-";
 
 		MorseCodable morseCode = new MorseCode(Language.ENGLISH);
-		String actual = morseCode.encode(value);
+		String actualString = morseCode.encode(value);
 
-		assertEquals(expected, actual);
+		assertEquals(expectedString, actualString);
 	}
 
 	/**
@@ -99,11 +99,11 @@ public class MorseCodeTest
 		String value = "- .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -." +
 				"   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-." +
 				"   - .... .   .-.. .- --.. -.--   -.. --- --. .-.-.-";
-		String expected = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.";
+		String expectedString = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.";
 
 		MorseCodable morseCode = new MorseCode(Language.ENGLISH);
-		String actual = morseCode.decode(value);
+		String actualString = morseCode.decode(value);
 
-		assertEquals(expected, actual);
+		assertEquals(expectedString, actualString);
 	}
 }

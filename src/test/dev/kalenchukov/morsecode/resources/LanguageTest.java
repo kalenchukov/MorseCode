@@ -43,10 +43,11 @@ public class LanguageTest
 	@Test
 	public void getScheme()
 	{
-		Schematic expected = new RussianScheme();
+		Language language = Language.RUSSIAN;
+		Schematic expectedScheme = new RussianScheme();
 
-		Schematic actual = Language.RUSSIAN.getScheme();
+		Schematic actualScheme = language.getScheme();
 
-		assertEquals(expected, actual);
+		assertEquals(expectedScheme, actualScheme);
 	}
 }
