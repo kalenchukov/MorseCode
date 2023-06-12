@@ -25,11 +25,13 @@
 package dev.kalenchukov.morsecode.schemes;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * Класс схемы сопоставления букв абстрактного алфавита и сигналов.
@@ -65,5 +67,42 @@ public abstract class AbstractScheme implements Schematic
 	public Map<@NotNull String, @NotNull List<@NotNull String>> getScheme()
 	{
 		return Collections.unmodifiableMap(this.scheme);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @param obj {@inheritDoc}
+	 * @return {@inheritDoc}
+	 */
+	@Override
+	public boolean equals(@Nullable final Object obj)
+	{
+		if (this == obj) {
+			return true;
+		}
+
+		if (!(obj instanceof Schematic)) {
+			return false;
+		}
+
+		final Schematic schematic = (Schematic) obj;
+
+		if (!Objects.equals(this.getScheme(), schematic.getScheme())) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
+	 */
+	@Override
+	public int hashCode()
+	{
+		return this.getScheme().hashCode();
 	}
 }

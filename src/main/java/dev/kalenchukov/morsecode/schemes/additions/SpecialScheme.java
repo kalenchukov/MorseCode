@@ -26,7 +26,6 @@ package dev.kalenchukov.morsecode.schemes.additions;
 
 import dev.kalenchukov.morsecode.schemes.AbstractScheme;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
@@ -72,46 +71,5 @@ public class SpecialScheme extends AbstractScheme
 	public SpecialScheme()
 	{
 		super(SpecialScheme.SCHEME);
-	}
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @param obj {@inheritDoc}
-	 * @return {@inheritDoc}
-	 */
-	@Override
-	public boolean equals(@Nullable final Object obj)
-	{
-		if (obj == null) {
-			return false;
-		}
-
-		if (this == obj) {
-			return true;
-		}
-
-		if (!this.getClass().equals(obj.getClass())) {
-			return false;
-		}
-
-		final SpecialScheme scheme = (SpecialScheme) obj;
-
-		if (!Objects.equals(this.getScheme(), scheme.getScheme())) {
-			return false;
-		}
-
-		return true;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @return {@inheritDoc}
-	 */
-	@Override
-	public int hashCode()
-	{
-		return this.getScheme().hashCode();
 	}
 }

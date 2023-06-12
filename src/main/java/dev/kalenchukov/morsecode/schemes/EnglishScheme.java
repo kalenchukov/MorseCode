@@ -25,7 +25,6 @@
 package dev.kalenchukov.morsecode.schemes;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
 
@@ -79,46 +78,5 @@ public class EnglishScheme extends AbstractScheme
 	public EnglishScheme()
 	{
 		super(EnglishScheme.SCHEME);
-	}
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @param obj {@inheritDoc}
-	 * @return {@inheritDoc}
-	 */
-	@Override
-	public boolean equals(@Nullable final Object obj)
-	{
-		if (obj == null) {
-			return false;
-		}
-
-		if (this == obj) {
-			return true;
-		}
-
-		if (!this.getClass().equals(obj.getClass())) {
-			return false;
-		}
-
-		final EnglishScheme scheme = (EnglishScheme) obj;
-
-		if (!Objects.equals(this.getScheme(), scheme.getScheme())) {
-			return false;
-		}
-
-		return true;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @return {@inheritDoc}
-	 */
-	@Override
-	public int hashCode()
-	{
-		return this.getScheme().hashCode();
 	}
 }
