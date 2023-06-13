@@ -86,9 +86,9 @@ public abstract class AbstractScheme implements Schematic
 			return false;
 		}
 
-		final Schematic schematic = (Schematic) obj;
+		final Schematic scheme = (Schematic) obj;
 
-		if (!Objects.equals(this.getScheme(), schematic.getScheme())) {
+		if (!Objects.equals(this.getScheme(), scheme.getScheme())) {
 			return false;
 		}
 
