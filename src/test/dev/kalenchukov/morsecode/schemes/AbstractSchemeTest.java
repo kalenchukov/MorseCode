@@ -24,6 +24,7 @@
 
 package dev.kalenchukov.morsecode.schemes;
 
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -51,60 +52,93 @@ public class AbstractSchemeTest
         assertThat(actualScheme).hasSize(33);
     }
 
-    /**
-     * Проверка метода {@link AbstractScheme#equals(Object)}.
-     */
-    @Test
-    public void testEquals()
-    {
-        Schematic scheme1 = new RussianScheme();
-        Schematic scheme2 = new RussianScheme();
+	/**
+	 * Класс проверки метода {@link AbstractScheme#equals(Object)}.
+	 *
+	 * @author Алексей Каленчуков
+	 */
+	@Nested
+	public class Equals
+	{
+		/**
+		 * Проверка метода {@link AbstractScheme#equals(Object)}.
+		 */
+		@Test
+		public void testEquals()
+		{
+			Schematic scheme1 = new RussianScheme();
+			Schematic scheme2 = new RussianScheme();
 
-        boolean actual = scheme1.equals(scheme2);
+			boolean actual = scheme1.equals(scheme2);
 
-        assertThat(actual).isTrue();
-    }
+			assertThat(actual).isTrue();
+		}
 
-    /**
-     * Проверка метода {@link AbstractScheme#equals(Object)} с {@code null}.
-     */
-    @Test
-    public void testEqualsNull()
-    {
-        Schematic scheme1 = new RussianScheme();
-        Schematic scheme2 = null;
+		/**
+		 * Проверка метода {@link AbstractScheme#equals(Object)} с {@code null}.
+		 */
+		@Test
+		public void testEqualsNull()
+		{
+			Schematic scheme1 = new RussianScheme();
+			Schematic scheme2 = null;
 
-        boolean actual = scheme1.equals(scheme2);
+			boolean actual = scheme1.equals(scheme2);
 
-        assertThat(actual).isFalse();
-    }
+			assertThat(actual).isFalse();
+		}
 
-    /**
-     * Проверка метода {@link AbstractScheme#equals(Object)} с разными классами.
-     */
-    @Test
-    public void testEqualsDifferentClass()
-    {
-        Schematic scheme1 = new RussianScheme();
-        Schematic scheme2 = new EnglishScheme();
+		/**
+		 * Проверка метода {@link AbstractScheme#equals(Object)} с разными классами.
+		 */
+		@Test
+		public void testEqualsDifferentClass()
+		{
+			Schematic scheme1 = new RussianScheme();
+			Schematic scheme2 = new EnglishScheme();
 
-        boolean actual = scheme1.equals(scheme2);
+			boolean actual = scheme1.equals(scheme2);
 
-        assertThat(actual).isFalse();
-    }
+			assertThat(actual).isFalse();
+		}
+	}
 
-    /**
-     * Проверка метода {@link AbstractScheme#hashCode()}.
-     */
-    @Test
-    public void testHashCode()
-    {
-        Schematic scheme1 = new RussianScheme();
-        Schematic scheme2 = new RussianScheme();
+	/**
+	 * Класс проверки метода {@link AbstractScheme#hashCode()}.
+	 *
+	 * @author Алексей Каленчуков
+	 */
+	@Nested
+	public class HashCode
+	{
+		/**
+		 * Проверка метода {@link AbstractScheme#hashCode()}.
+		 */
+		@Test
+		public void testHashCode()
+		{
+			Schematic scheme1 = new RussianScheme();
+			Schematic scheme2 = new RussianScheme();
 
-        int expectedHashCode = scheme1.hashCode();
-        int actualHashCode = scheme2.hashCode();
+			int expectedHashCode = scheme1.hashCode();
+			int actualHashCode = scheme2.hashCode();
 
-        assertThat(actualHashCode).isEqualTo(expectedHashCode);
-    }
+			assertThat(actualHashCode).isEqualTo(expectedHashCode);
+		}
+
+		/**
+		 * Проверка метода {@link AbstractScheme#hashCode()} с разными классами.
+		 */
+		@Test
+		public void testHashCodeDifferentClass()
+		{
+			Schematic scheme1 = new RussianScheme();
+			Schematic scheme2 = new EnglishScheme();
+
+			int expectedHashCode = scheme1.hashCode();
+			int actualHashCode = scheme2.hashCode();
+
+			assertThat(actualHashCode).isNotEqualTo(expectedHashCode);
+		}
+	}
 }
