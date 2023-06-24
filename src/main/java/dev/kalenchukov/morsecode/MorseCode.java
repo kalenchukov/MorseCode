@@ -131,7 +131,7 @@ public class MorseCode implements MorseCodable
 	 * Возвращает символ соответствующий сигналу в схеме сопоставления.
 	 *
 	 * @param signal сигнал.
-	 * @return символ или {@code null} если для данного сигнала нет символа в схеме сопоставления.
+	 * @return символ или {@code null}, если для {@code signal} нет символа в схеме сопоставления.
 	 */
 	@Nullable
 	private String getSymbolBySignal(@NotNull final String signal)
@@ -152,7 +152,7 @@ public class MorseCode implements MorseCodable
 	 * Возвращает сигнал соответствующий символу в схеме сопоставления.
 	 *
 	 * @param symbol символ.
-	 * @return сигнал или {@code null} если для данного символа нет сигнала в схеме сопоставления.
+	 * @return сигнал или {@code null}, если для {@code symbol} нет сигнала в схеме сопоставления.
 	 */
 	@Nullable
 	private String getSignalBySymbol(@NotNull final String symbol)
