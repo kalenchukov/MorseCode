@@ -68,6 +68,7 @@ public class MorseCode implements MorseCodable
 	 *
 	 * @param text {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code text} передан {@code null}.
 	 */
 	@NotNull
 	@Override
@@ -104,6 +105,7 @@ public class MorseCode implements MorseCodable
 	 *
 	 * @param code {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code code} передан {@code null}.
 	 */
 	@NotNull
 	@Override
@@ -132,6 +134,7 @@ public class MorseCode implements MorseCodable
 	 *
 	 * @param signal сигнал.
 	 * @return символ или {@code null}, если для {@code signal} нет символа в схеме сопоставления.
+	 * @throws NullPointerException если в качестве {@code signal} передан {@code null}.
 	 */
 	@Nullable
 	private String getSymbolBySignal(@NotNull final String signal)
@@ -153,6 +156,7 @@ public class MorseCode implements MorseCodable
 	 *
 	 * @param symbol символ.
 	 * @return сигнал или {@code null}, если для {@code symbol} нет сигнала в схеме сопоставления.
+	 * @throws NullPointerException если в качестве {@code symbol} передан {@code null}.
 	 */
 	@Nullable
 	private String getSignalBySymbol(@NotNull final String symbol)
@@ -175,6 +179,7 @@ public class MorseCode implements MorseCodable
 	 * Добавляет схему сопоставления.
 	 *
 	 * @param scheme схема сопоставления.
+	 * @throws NullPointerException если в качестве {@code scheme} передан {@code null}.
 	 */
 	private void addScheme(@NotNull final Schematic scheme)
 	{
