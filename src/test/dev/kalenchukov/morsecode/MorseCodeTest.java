@@ -24,7 +24,7 @@
 
 package dev.kalenchukov.morsecode;
 
-import dev.kalenchukov.morsecode.resources.Language;
+import dev.kalenchukov.morsecode.types.Language;
 import dev.kalenchukov.morsecode.schemes.EnglishScheme;
 import dev.kalenchukov.morsecode.schemes.RussianScheme;
 import org.junit.jupiter.api.Test;

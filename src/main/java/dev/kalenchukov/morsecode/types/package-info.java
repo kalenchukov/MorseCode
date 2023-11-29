@@ -22,32 +22,7 @@
  * SOFTWARE.
  */
 
-package dev.kalenchukov.morsecode.resources;
-
-import dev.kalenchukov.morsecode.schemes.RussianScheme;
-import dev.kalenchukov.morsecode.schemes.Schematic;
-import org.junit.jupiter.api.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
-
 /**
- * Класс проверки констант и методов перечисления {@link Language}.
- *
- * @author Алексей Каленчуков
+ * Предоставляет перечисления, необходимые для определения типов.
  */
-public class LanguageTest
-{
-	/**
-	 * Проверка метода {@link Language#getScheme()}.
-	 */
-	@Test
-	public void getScheme()
-	{
-		Language language = Language.RUSSIAN;
-		Schematic expectedScheme = new RussianScheme();
-
-		Schematic actualScheme = language.getScheme();
-
-		assertThat(actualScheme).isEqualTo(expectedScheme);
-	}
-}
+package dev.kalenchukov.morsecode.types;

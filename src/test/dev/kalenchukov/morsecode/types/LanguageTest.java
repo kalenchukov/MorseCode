@@ -22,54 +22,32 @@
  * SOFTWARE.
  */
 
-package dev.kalenchukov.morsecode.resources;
+package dev.kalenchukov.morsecode.types;
 
-import dev.kalenchukov.morsecode.schemes.EnglishScheme;
 import dev.kalenchukov.morsecode.schemes.RussianScheme;
 import dev.kalenchukov.morsecode.schemes.Schematic;
-import org.jetbrains.annotations.NotNull;
+import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Перечисление языков транслитерации.
+ * Класс проверки констант и методов перечисления {@link Language}.
  *
  * @author Алексей Каленчуков
  */
-public enum Language
+public class LanguageTest
 {
 	/**
-	 * Русский язык.
+	 * Проверка метода {@link Language#getScheme()}.
 	 */
-	RUSSIAN(new RussianScheme()),
-
-	/**
-	 * Английский язык.
-	 */
-	ENGLISH(new EnglishScheme());
-
-	/**
-	 * Схема сопоставления.
-	 */
-	@NotNull
-	private final Schematic scheme;
-
-	/**
-	 * Конструктор для {@code Language}.
-	 *
-	 * @param scheme схема сопоставления.
-	 */
-	Language(@NotNull final Schematic scheme)
+	@Test
+	public void getScheme()
 	{
-		this.scheme = scheme;
-	}
+		Language language = Language.RUSSIAN;
+		Schematic expectedScheme = new RussianScheme();
 
-	/**
-	 * Возвращает схему сопоставления.
-	 *
-	 * @return схема сопоставления.
-	 */
-	@NotNull
-	public Schematic getScheme()
-	{
-		return this.scheme;
+		Schematic actualScheme = language.getScheme();
+
+		assertThat(actualScheme).isEqualTo(expectedScheme);
 	}
 }

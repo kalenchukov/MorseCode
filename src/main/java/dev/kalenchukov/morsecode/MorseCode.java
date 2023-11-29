@@ -24,7 +24,7 @@
 
 package dev.kalenchukov.morsecode;
 
-import dev.kalenchukov.morsecode.resources.Language;
+import dev.kalenchukov.morsecode.types.Language;
 import dev.kalenchukov.morsecode.schemes.Schematic;
 import dev.kalenchukov.morsecode.schemes.additions.SpecialScheme;
 import dev.kalenchukov.morsecode.schemes.additions.NumberScheme;

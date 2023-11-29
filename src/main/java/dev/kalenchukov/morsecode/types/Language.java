@@ -22,7 +22,54 @@
  * SOFTWARE.
  */
 
+package dev.kalenchukov.morsecode.types;
+
+import dev.kalenchukov.morsecode.schemes.EnglishScheme;
+import dev.kalenchukov.morsecode.schemes.RussianScheme;
+import dev.kalenchukov.morsecode.schemes.Schematic;
+import org.jetbrains.annotations.NotNull;
+
 /**
- * Предоставляет перечисления, необходимые для определения типов.
+ * Перечисление языков транслитерации.
+ *
+ * @author Алексей Каленчуков
  */
-package dev.kalenchukov.morsecode.resources;
+public enum Language
+{
+	/**
+	 * Русский язык.
+	 */
+	RUSSIAN(new RussianScheme()),
+
+	/**
+	 * Английский язык.
+	 */
+	ENGLISH(new EnglishScheme());
+
+	/**
+	 * Схема сопоставления.
+	 */
+	@NotNull
+	private final Schematic scheme;
+
+	/**
+	 * Конструктор для {@code Language}.
+	 *
+	 * @param scheme схема сопоставления.
+	 */
+	Language(@NotNull final Schematic scheme)
+	{
+		this.scheme = scheme;
+	}
+
+	/**
+	 * Возвращает схему сопоставления.
+	 *
+	 * @return схема сопоставления.
+	 */
+	@NotNull
+	public Schematic getScheme()
+	{
+		return this.scheme;
+	}
+}
