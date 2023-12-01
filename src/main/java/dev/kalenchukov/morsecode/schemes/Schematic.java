@@ -47,20 +47,20 @@ public interface Schematic
 	@NotNull
 	Map<@NotNull String, @NotNull List<@NotNull String>> getScheme();
 
-    /**
-     * Проверяет равенство объектов.
-     *
-     * @param obj сравниваемый объект.
-     * @return {@code true}, если данный объект равен {@code obj}, иначе {@code false}.
-     * @see Object#equals(Object)
-     */
+	/**
+	 * Проверяет равенство объектов.
+	 *
+	 * @param obj сравниваемый объект.
+	 * @return {@code true}, если данный объект равен {@code obj}, иначе {@code false}.
+	 * @see Object#equals(Object)
+	 */
 	boolean equals(@Nullable Object obj);
 
-    /**
-     * Возвращает значение объекта в виде числа.
-     *
-     * @return число.
-     * @see Object#hashCode()
-     */
+	/**
+	 * Возвращает значение объекта в виде числа.
+	 *
+	 * @return число.
+	 * @see Object#hashCode()
+	 */
 	int hashCode();
 }

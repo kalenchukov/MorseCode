@@ -42,7 +42,7 @@ public class MorseCodeTest
 	 * Проверка метода {@link MorseCode#encode(String)} со схемой {@link RussianScheme}.
 	 */
 	@Test
-	public void encodeRussianScheme()
+	public void encodeWithRussianScheme()
 	{
 		String value = "Эх, чужд кайф, сплющь объём вши, грызя цент.";
 		String expectedString = "..-.. .... --..--   ---. ..- ...- -..   -.- .- .---" +
@@ -59,7 +59,7 @@ public class MorseCodeTest
 	 * Проверка метода {@link MorseCode#decode(String)} со схемой {@link RussianScheme}.
 	 */
 	@Test
-	public void decodeRussianScheme()
+	public void decodeWithRussianScheme()
 	{
 		String value = "..-.. .... --..--   ---. ..- ...- -..   -.- .- .---" +
 				" ..-. --..--   ... .--. .-.. ..-- --.- -..-" +
@@ -77,7 +77,7 @@ public class MorseCodeTest
 	 * Проверка метода {@link MorseCode#encode(String)} со схемой {@link EnglishScheme}.
 	 */
 	@Test
-	public void encodeEnglishScheme()
+	public void encodeWithEnglishScheme()
 	{
 		String value = "The quick brown fox jumps over the lazy dog.";
 		String expectedString = "- .... .   --.- ..- .. -.-. -.-   -... .-. ---" +
@@ -94,7 +94,7 @@ public class MorseCodeTest
 	 * Проверка метода {@link MorseCode#decode(String)} со схемой {@link EnglishScheme}.
 	 */
 	@Test
-	public void decodeEnglishScheme()
+	public void decodeWithEnglishScheme()
 	{
 		String value = "- .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -." +
 				"   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-." +

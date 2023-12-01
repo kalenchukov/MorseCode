@@ -39,18 +39,18 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 public class AbstractSchemeTest
 {
-    /**
-     * Проверка метода {@link AbstractScheme#getScheme()}.
-     */
-    @Test
-    public void getScheme()
-    {
-        Schematic scheme = new RussianScheme();
+	/**
+	 * Проверка метода {@link AbstractScheme#getScheme()}.
+	 */
+	@Test
+	public void getScheme()
+	{
+		Schematic scheme = new RussianScheme();
 
-        Map<String, List<String>> actualScheme = scheme.getScheme();
+		Map<String, List<String>> actualScheme = scheme.getScheme();
 
-        assertThat(actualScheme).hasSize(33);
-    }
+		assertThat(actualScheme).hasSize(33);
+	}
 
 	/**
 	 * Класс проверки метода {@link AbstractScheme#equals(Object)}.
@@ -61,10 +61,10 @@ public class AbstractSchemeTest
 	public class Equals
 	{
 		/**
-		 * Проверка метода {@link AbstractScheme#equals(Object)}.
+		 * Проверка метода {@link AbstractScheme#equals(Object)} с равными объектами.
 		 */
 		@Test
-		public void testEquals()
+		public void equalsWithEqualsValue()
 		{
 			Schematic scheme1 = new RussianScheme();
 			Schematic scheme2 = new RussianScheme();
@@ -75,10 +75,10 @@ public class AbstractSchemeTest
 		}
 
 		/**
-		 * Проверка метода {@link AbstractScheme#equals(Object)} с {@code null}.
+		 * Проверка метода {@link AbstractScheme#equals(Object)} с значением в виде {@code null}.
 		 */
 		@Test
-		public void testEqualsNull()
+		public void equalsWithNull()
 		{
 			Schematic scheme1 = new RussianScheme();
 			Schematic scheme2 = null;
@@ -92,7 +92,7 @@ public class AbstractSchemeTest
 		 * Проверка метода {@link AbstractScheme#equals(Object)} с разными классами.
 		 */
 		@Test
-		public void testEqualsDifferentClass()
+		public void equalsWithDifferentTypeClass()
 		{
 			Schematic scheme1 = new RussianScheme();
 			Schematic scheme2 = new EnglishScheme();
@@ -112,10 +112,10 @@ public class AbstractSchemeTest
 	public class HashCode
 	{
 		/**
-		 * Проверка метода {@link AbstractScheme#hashCode()}.
+		 * Проверка метода {@link AbstractScheme#hashCode()} с равными объектами.
 		 */
 		@Test
-		public void testHashCode()
+		public void hashCodeWithEqualsValue()
 		{
 			Schematic scheme1 = new RussianScheme();
 			Schematic scheme2 = new RussianScheme();
@@ -130,7 +130,7 @@ public class AbstractSchemeTest
 		 * Проверка метода {@link AbstractScheme#hashCode()} с разными классами.
 		 */
 		@Test
-		public void testHashCodeDifferentClass()
+		public void hashCodeWithDifferentTypeClass()
 		{
 			Schematic scheme1 = new RussianScheme();
 			Schematic scheme2 = new EnglishScheme();
